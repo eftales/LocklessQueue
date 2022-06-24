@@ -9,7 +9,7 @@
 #include <atomic>
 #include <memory>
 
-#define SHAREBUFFER_SIZE    4096
+#define SHAREBUFFER_SIZE    10
 
 
 

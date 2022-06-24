@@ -4,8 +4,8 @@
 #include <climits>
 #include "stdlib.h"
 
-#define THREADS 10
-#define THREADS_C 1
+#define THREADS 2
+#define THREADS_C 3
 #define JOBS    INT_MAX
 #define ASYN_probability  0
 
@@ -34,7 +34,7 @@ bool consumer(unsigned char id){
 
         if(buffer.get()!= nullptr){ //
             i += 1;
-            if(i%4096==0){
+            if(i%SHAREBUFFER_SIZE==0){
                 printf("%d\n",loop++);
             }
         //    printf("consumer %d get event\n",id);
